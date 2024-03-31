@@ -1,7 +1,7 @@
 import unittest
 import requests
 from flask import Flask
-import uwsgi
+
 
 
 
@@ -26,7 +26,7 @@ class TestWebsiteConnection(unittest.TestCase):
                 return 'Hello, World!'
 
             if __name__ == '__main__':
-                app.run(port=5000)
+                app.run(debug=True)
 
 
         except Exception as e:
