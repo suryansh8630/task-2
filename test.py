@@ -1,5 +1,7 @@
 import unittest
 import requests
+import webbrowser
+
 
 class TestWebsiteConnection(unittest.TestCase):
     
@@ -14,6 +16,8 @@ class TestWebsiteConnection(unittest.TestCase):
             
             self.assertEqual(status_code, 200)  # Assuming 200 is the expected status code for successful connection
             print("Website loaded successfully!")
+            webbrowser.open('index.html', 'chrome')
+
         except Exception as e:
             print("Failed to connect to website:", e)
             self.fail("Failed to connect to website")
