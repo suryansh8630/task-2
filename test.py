@@ -1,6 +1,7 @@
 import unittest
 import requests
 from flask import Flask
+import uwsgi
 
 
 
