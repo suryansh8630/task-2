@@ -25,7 +25,7 @@ class TestWebsiteConnection(unittest.TestCase):
                 return 'Hello, World!'
 
             if __name__ == '__main__':
-                app.run()
+                app.run(host='20.197.8.46')
 
 
         except Exception as e:
