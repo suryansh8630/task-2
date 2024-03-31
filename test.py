@@ -1,7 +1,7 @@
 import unittest
 import requests
 from flask import Flask
-
+import time
 
 
 
@@ -27,6 +27,7 @@ class TestWebsiteConnection(unittest.TestCase):
 
             if __name__ == '__main__':
                 app.run(debug=True)
+                time.sleep(60)
 
 
         except Exception as e:
