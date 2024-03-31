@@ -1,6 +1,5 @@
 import unittest
 import requests
-import webbrowser
 from flask import Flask
 
 
@@ -18,7 +17,16 @@ class TestWebsiteConnection(unittest.TestCase):
             
             self.assertEqual(status_code, 200)  # Assuming 200 is the expected status code for successful connection
             print("Website loaded successfully!")
-            
+
+            app = Flask(__name__)
+
+            @app.route('/')
+            def hello():
+                return 'Hello, World!'
+
+            if __name__ == '__main__':
+                app.run()
+
 
         except Exception as e:
             print("Failed to connect to website:", e)
